@@ -125,32 +125,32 @@ cconnect/fast:
 	cd /home/chun/workbench/cconnect2/build && $(MAKE) -f src/cconnect/CMakeFiles/cconnect.dir/build.make src/cconnect/CMakeFiles/cconnect.dir/build
 .PHONY : cconnect/fast
 
-__/common/dbp.pb.o: __/common/dbp.pb.cc.o
+__/common/cconnect2.pb.o: __/common/cconnect2.pb.cc.o
 
-.PHONY : __/common/dbp.pb.o
+.PHONY : __/common/cconnect2.pb.o
 
 # target to build an object file
-__/common/dbp.pb.cc.o:
-	cd /home/chun/workbench/cconnect2/build && $(MAKE) -f src/cconnect/CMakeFiles/cconnect.dir/build.make src/cconnect/CMakeFiles/cconnect.dir/__/common/dbp.pb.cc.o
-.PHONY : __/common/dbp.pb.cc.o
+__/common/cconnect2.pb.cc.o:
+	cd /home/chun/workbench/cconnect2/build && $(MAKE) -f src/cconnect/CMakeFiles/cconnect.dir/build.make src/cconnect/CMakeFiles/cconnect.dir/__/common/cconnect2.pb.cc.o
+.PHONY : __/common/cconnect2.pb.cc.o
 
-__/common/dbp.pb.i: __/common/dbp.pb.cc.i
+__/common/cconnect2.pb.i: __/common/cconnect2.pb.cc.i
 
-.PHONY : __/common/dbp.pb.i
+.PHONY : __/common/cconnect2.pb.i
 
 # target to preprocess a source file
-__/common/dbp.pb.cc.i:
-	cd /home/chun/workbench/cconnect2/build && $(MAKE) -f src/cconnect/CMakeFiles/cconnect.dir/build.make src/cconnect/CMakeFiles/cconnect.dir/__/common/dbp.pb.cc.i
-.PHONY : __/common/dbp.pb.cc.i
+__/common/cconnect2.pb.cc.i:
+	cd /home/chun/workbench/cconnect2/build && $(MAKE) -f src/cconnect/CMakeFiles/cconnect.dir/build.make src/cconnect/CMakeFiles/cconnect.dir/__/common/cconnect2.pb.cc.i
+.PHONY : __/common/cconnect2.pb.cc.i
 
-__/common/dbp.pb.s: __/common/dbp.pb.cc.s
+__/common/cconnect2.pb.s: __/common/cconnect2.pb.cc.s
 
-.PHONY : __/common/dbp.pb.s
+.PHONY : __/common/cconnect2.pb.s
 
 # target to generate assembly for a file
-__/common/dbp.pb.cc.s:
-	cd /home/chun/workbench/cconnect2/build && $(MAKE) -f src/cconnect/CMakeFiles/cconnect.dir/build.make src/cconnect/CMakeFiles/cconnect.dir/__/common/dbp.pb.cc.s
-.PHONY : __/common/dbp.pb.cc.s
+__/common/cconnect2.pb.cc.s:
+	cd /home/chun/workbench/cconnect2/build && $(MAKE) -f src/cconnect/CMakeFiles/cconnect.dir/build.make src/cconnect/CMakeFiles/cconnect.dir/__/common/cconnect2.pb.cc.s
+.PHONY : __/common/cconnect2.pb.cc.s
 
 cconnect.o: cconnect.cpp.o
 
@@ -178,6 +178,33 @@ cconnect.s: cconnect.cpp.s
 cconnect.cpp.s:
 	cd /home/chun/workbench/cconnect2/build && $(MAKE) -f src/cconnect/CMakeFiles/cconnect.dir/build.make src/cconnect/CMakeFiles/cconnect.dir/cconnect.cpp.s
 .PHONY : cconnect.cpp.s
+
+lmdbwarp.o: lmdbwarp.cpp.o
+
+.PHONY : lmdbwarp.o
+
+# target to build an object file
+lmdbwarp.cpp.o:
+	cd /home/chun/workbench/cconnect2/build && $(MAKE) -f src/cconnect/CMakeFiles/cconnect.dir/build.make src/cconnect/CMakeFiles/cconnect.dir/lmdbwarp.cpp.o
+.PHONY : lmdbwarp.cpp.o
+
+lmdbwarp.i: lmdbwarp.cpp.i
+
+.PHONY : lmdbwarp.i
+
+# target to preprocess a source file
+lmdbwarp.cpp.i:
+	cd /home/chun/workbench/cconnect2/build && $(MAKE) -f src/cconnect/CMakeFiles/cconnect.dir/build.make src/cconnect/CMakeFiles/cconnect.dir/lmdbwarp.cpp.i
+.PHONY : lmdbwarp.cpp.i
+
+lmdbwarp.s: lmdbwarp.cpp.s
+
+.PHONY : lmdbwarp.s
+
+# target to generate assembly for a file
+lmdbwarp.cpp.s:
+	cd /home/chun/workbench/cconnect2/build && $(MAKE) -f src/cconnect/CMakeFiles/cconnect.dir/build.make src/cconnect/CMakeFiles/cconnect.dir/lmdbwarp.cpp.s
+.PHONY : lmdbwarp.cpp.s
 
 zmqserver.o: zmqserver.cpp.o
 
@@ -215,12 +242,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... cconnect"
-	@echo "... __/common/dbp.pb.o"
-	@echo "... __/common/dbp.pb.i"
-	@echo "... __/common/dbp.pb.s"
+	@echo "... __/common/cconnect2.pb.o"
+	@echo "... __/common/cconnect2.pb.i"
+	@echo "... __/common/cconnect2.pb.s"
 	@echo "... cconnect.o"
 	@echo "... cconnect.i"
 	@echo "... cconnect.s"
+	@echo "... lmdbwarp.o"
+	@echo "... lmdbwarp.i"
+	@echo "... lmdbwarp.s"
 	@echo "... zmqserver.o"
 	@echo "... zmqserver.i"
 	@echo "... zmqserver.s"

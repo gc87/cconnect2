@@ -83,31 +83,31 @@ src/launch/CMakeFiles/launch.dir/__/common/zmqclient.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/launch.dir/__/common/zmqclient.cpp.s"
 	cd /home/chun/workbench/cconnect2/build/src/launch && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chun/workbench/cconnect2/src/common/zmqclient.cpp -o CMakeFiles/launch.dir/__/common/zmqclient.cpp.s
 
-src/launch/CMakeFiles/launch.dir/__/common/dbp.pb.cc.o: src/launch/CMakeFiles/launch.dir/flags.make
-src/launch/CMakeFiles/launch.dir/__/common/dbp.pb.cc.o: ../src/common/dbp.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chun/workbench/cconnect2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/launch/CMakeFiles/launch.dir/__/common/dbp.pb.cc.o"
-	cd /home/chun/workbench/cconnect2/build/src/launch && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/launch.dir/__/common/dbp.pb.cc.o -c /home/chun/workbench/cconnect2/src/common/dbp.pb.cc
+src/launch/CMakeFiles/launch.dir/__/common/cconnect2.pb.cc.o: src/launch/CMakeFiles/launch.dir/flags.make
+src/launch/CMakeFiles/launch.dir/__/common/cconnect2.pb.cc.o: ../src/common/cconnect2.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chun/workbench/cconnect2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/launch/CMakeFiles/launch.dir/__/common/cconnect2.pb.cc.o"
+	cd /home/chun/workbench/cconnect2/build/src/launch && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/launch.dir/__/common/cconnect2.pb.cc.o -c /home/chun/workbench/cconnect2/src/common/cconnect2.pb.cc
 
-src/launch/CMakeFiles/launch.dir/__/common/dbp.pb.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/launch.dir/__/common/dbp.pb.cc.i"
-	cd /home/chun/workbench/cconnect2/build/src/launch && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chun/workbench/cconnect2/src/common/dbp.pb.cc > CMakeFiles/launch.dir/__/common/dbp.pb.cc.i
+src/launch/CMakeFiles/launch.dir/__/common/cconnect2.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/launch.dir/__/common/cconnect2.pb.cc.i"
+	cd /home/chun/workbench/cconnect2/build/src/launch && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chun/workbench/cconnect2/src/common/cconnect2.pb.cc > CMakeFiles/launch.dir/__/common/cconnect2.pb.cc.i
 
-src/launch/CMakeFiles/launch.dir/__/common/dbp.pb.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/launch.dir/__/common/dbp.pb.cc.s"
-	cd /home/chun/workbench/cconnect2/build/src/launch && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chun/workbench/cconnect2/src/common/dbp.pb.cc -o CMakeFiles/launch.dir/__/common/dbp.pb.cc.s
+src/launch/CMakeFiles/launch.dir/__/common/cconnect2.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/launch.dir/__/common/cconnect2.pb.cc.s"
+	cd /home/chun/workbench/cconnect2/build/src/launch && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chun/workbench/cconnect2/src/common/cconnect2.pb.cc -o CMakeFiles/launch.dir/__/common/cconnect2.pb.cc.s
 
 # Object files for target launch
 launch_OBJECTS = \
 "CMakeFiles/launch.dir/launch.cpp.o" \
 "CMakeFiles/launch.dir/__/common/zmqclient.cpp.o" \
-"CMakeFiles/launch.dir/__/common/dbp.pb.cc.o"
+"CMakeFiles/launch.dir/__/common/cconnect2.pb.cc.o"
 
 # External object files for target launch
 launch_EXTERNAL_OBJECTS =
 
 src/launch/launch: src/launch/CMakeFiles/launch.dir/launch.cpp.o
 src/launch/launch: src/launch/CMakeFiles/launch.dir/__/common/zmqclient.cpp.o
-src/launch/launch: src/launch/CMakeFiles/launch.dir/__/common/dbp.pb.cc.o
+src/launch/launch: src/launch/CMakeFiles/launch.dir/__/common/cconnect2.pb.cc.o
 src/launch/launch: src/launch/CMakeFiles/launch.dir/build.make
 src/launch/launch: /usr/local/lib/libzmq.so.5.2.4
 src/launch/launch: /usr/lib/x86_64-linux-gnu/libsodium.so

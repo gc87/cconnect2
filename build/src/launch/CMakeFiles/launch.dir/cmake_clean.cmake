@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/launch.dir/__/common/dbp.pb.cc.o"
+  "CMakeFiles/launch.dir/__/common/cconnect2.pb.cc.o"
   "CMakeFiles/launch.dir/__/common/zmqclient.cpp.o"
   "CMakeFiles/launch.dir/launch.cpp.o"
   "launch"

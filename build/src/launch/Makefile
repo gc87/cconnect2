@@ -125,32 +125,32 @@ launch/fast:
 	cd /home/chun/workbench/cconnect2/build && $(MAKE) -f src/launch/CMakeFiles/launch.dir/build.make src/launch/CMakeFiles/launch.dir/build
 .PHONY : launch/fast
 
-__/common/dbp.pb.o: __/common/dbp.pb.cc.o
+__/common/cconnect2.pb.o: __/common/cconnect2.pb.cc.o
 
-.PHONY : __/common/dbp.pb.o
+.PHONY : __/common/cconnect2.pb.o
 
 # target to build an object file
-__/common/dbp.pb.cc.o:
-	cd /home/chun/workbench/cconnect2/build && $(MAKE) -f src/launch/CMakeFiles/launch.dir/build.make src/launch/CMakeFiles/launch.dir/__/common/dbp.pb.cc.o
-.PHONY : __/common/dbp.pb.cc.o
+__/common/cconnect2.pb.cc.o:
+	cd /home/chun/workbench/cconnect2/build && $(MAKE) -f src/launch/CMakeFiles/launch.dir/build.make src/launch/CMakeFiles/launch.dir/__/common/cconnect2.pb.cc.o
+.PHONY : __/common/cconnect2.pb.cc.o
 
-__/common/dbp.pb.i: __/common/dbp.pb.cc.i
+__/common/cconnect2.pb.i: __/common/cconnect2.pb.cc.i
 
-.PHONY : __/common/dbp.pb.i
+.PHONY : __/common/cconnect2.pb.i
 
 # target to preprocess a source file
-__/common/dbp.pb.cc.i:
-	cd /home/chun/workbench/cconnect2/build && $(MAKE) -f src/launch/CMakeFiles/launch.dir/build.make src/launch/CMakeFiles/launch.dir/__/common/dbp.pb.cc.i
-.PHONY : __/common/dbp.pb.cc.i
+__/common/cconnect2.pb.cc.i:
+	cd /home/chun/workbench/cconnect2/build && $(MAKE) -f src/launch/CMakeFiles/launch.dir/build.make src/launch/CMakeFiles/launch.dir/__/common/cconnect2.pb.cc.i
+.PHONY : __/common/cconnect2.pb.cc.i
 
-__/common/dbp.pb.s: __/common/dbp.pb.cc.s
+__/common/cconnect2.pb.s: __/common/cconnect2.pb.cc.s
 
-.PHONY : __/common/dbp.pb.s
+.PHONY : __/common/cconnect2.pb.s
 
 # target to generate assembly for a file
-__/common/dbp.pb.cc.s:
-	cd /home/chun/workbench/cconnect2/build && $(MAKE) -f src/launch/CMakeFiles/launch.dir/build.make src/launch/CMakeFiles/launch.dir/__/common/dbp.pb.cc.s
-.PHONY : __/common/dbp.pb.cc.s
+__/common/cconnect2.pb.cc.s:
+	cd /home/chun/workbench/cconnect2/build && $(MAKE) -f src/launch/CMakeFiles/launch.dir/build.make src/launch/CMakeFiles/launch.dir/__/common/cconnect2.pb.cc.s
+.PHONY : __/common/cconnect2.pb.cc.s
 
 __/common/zmqclient.o: __/common/zmqclient.cpp.o
 
@@ -215,9 +215,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... launch"
-	@echo "... __/common/dbp.pb.o"
-	@echo "... __/common/dbp.pb.i"
-	@echo "... __/common/dbp.pb.s"
+	@echo "... __/common/cconnect2.pb.o"
+	@echo "... __/common/cconnect2.pb.i"
+	@echo "... __/common/cconnect2.pb.s"
 	@echo "... __/common/zmqclient.o"
 	@echo "... __/common/zmqclient.i"
 	@echo "... __/common/zmqclient.s"

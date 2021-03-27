@@ -83,36 +83,51 @@ src/cconnect/CMakeFiles/cconnect.dir/zmqserver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cconnect.dir/zmqserver.cpp.s"
 	cd /home/chun/workbench/cconnect2/build/src/cconnect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chun/workbench/cconnect2/src/cconnect/zmqserver.cpp -o CMakeFiles/cconnect.dir/zmqserver.cpp.s
 
-src/cconnect/CMakeFiles/cconnect.dir/__/common/dbp.pb.cc.o: src/cconnect/CMakeFiles/cconnect.dir/flags.make
-src/cconnect/CMakeFiles/cconnect.dir/__/common/dbp.pb.cc.o: ../src/common/dbp.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chun/workbench/cconnect2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/cconnect/CMakeFiles/cconnect.dir/__/common/dbp.pb.cc.o"
-	cd /home/chun/workbench/cconnect2/build/src/cconnect && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cconnect.dir/__/common/dbp.pb.cc.o -c /home/chun/workbench/cconnect2/src/common/dbp.pb.cc
+src/cconnect/CMakeFiles/cconnect.dir/__/common/cconnect2.pb.cc.o: src/cconnect/CMakeFiles/cconnect.dir/flags.make
+src/cconnect/CMakeFiles/cconnect.dir/__/common/cconnect2.pb.cc.o: ../src/common/cconnect2.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chun/workbench/cconnect2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/cconnect/CMakeFiles/cconnect.dir/__/common/cconnect2.pb.cc.o"
+	cd /home/chun/workbench/cconnect2/build/src/cconnect && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cconnect.dir/__/common/cconnect2.pb.cc.o -c /home/chun/workbench/cconnect2/src/common/cconnect2.pb.cc
 
-src/cconnect/CMakeFiles/cconnect.dir/__/common/dbp.pb.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cconnect.dir/__/common/dbp.pb.cc.i"
-	cd /home/chun/workbench/cconnect2/build/src/cconnect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chun/workbench/cconnect2/src/common/dbp.pb.cc > CMakeFiles/cconnect.dir/__/common/dbp.pb.cc.i
+src/cconnect/CMakeFiles/cconnect.dir/__/common/cconnect2.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cconnect.dir/__/common/cconnect2.pb.cc.i"
+	cd /home/chun/workbench/cconnect2/build/src/cconnect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chun/workbench/cconnect2/src/common/cconnect2.pb.cc > CMakeFiles/cconnect.dir/__/common/cconnect2.pb.cc.i
 
-src/cconnect/CMakeFiles/cconnect.dir/__/common/dbp.pb.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cconnect.dir/__/common/dbp.pb.cc.s"
-	cd /home/chun/workbench/cconnect2/build/src/cconnect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chun/workbench/cconnect2/src/common/dbp.pb.cc -o CMakeFiles/cconnect.dir/__/common/dbp.pb.cc.s
+src/cconnect/CMakeFiles/cconnect.dir/__/common/cconnect2.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cconnect.dir/__/common/cconnect2.pb.cc.s"
+	cd /home/chun/workbench/cconnect2/build/src/cconnect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chun/workbench/cconnect2/src/common/cconnect2.pb.cc -o CMakeFiles/cconnect.dir/__/common/cconnect2.pb.cc.s
+
+src/cconnect/CMakeFiles/cconnect.dir/lmdbwarp.cpp.o: src/cconnect/CMakeFiles/cconnect.dir/flags.make
+src/cconnect/CMakeFiles/cconnect.dir/lmdbwarp.cpp.o: ../src/cconnect/lmdbwarp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chun/workbench/cconnect2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/cconnect/CMakeFiles/cconnect.dir/lmdbwarp.cpp.o"
+	cd /home/chun/workbench/cconnect2/build/src/cconnect && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cconnect.dir/lmdbwarp.cpp.o -c /home/chun/workbench/cconnect2/src/cconnect/lmdbwarp.cpp
+
+src/cconnect/CMakeFiles/cconnect.dir/lmdbwarp.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cconnect.dir/lmdbwarp.cpp.i"
+	cd /home/chun/workbench/cconnect2/build/src/cconnect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chun/workbench/cconnect2/src/cconnect/lmdbwarp.cpp > CMakeFiles/cconnect.dir/lmdbwarp.cpp.i
+
+src/cconnect/CMakeFiles/cconnect.dir/lmdbwarp.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cconnect.dir/lmdbwarp.cpp.s"
+	cd /home/chun/workbench/cconnect2/build/src/cconnect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chun/workbench/cconnect2/src/cconnect/lmdbwarp.cpp -o CMakeFiles/cconnect.dir/lmdbwarp.cpp.s
 
 # Object files for target cconnect
 cconnect_OBJECTS = \
 "CMakeFiles/cconnect.dir/cconnect.cpp.o" \
 "CMakeFiles/cconnect.dir/zmqserver.cpp.o" \
-"CMakeFiles/cconnect.dir/__/common/dbp.pb.cc.o"
+"CMakeFiles/cconnect.dir/__/common/cconnect2.pb.cc.o" \
+"CMakeFiles/cconnect.dir/lmdbwarp.cpp.o"
 
 # External object files for target cconnect
 cconnect_EXTERNAL_OBJECTS =
 
 src/cconnect/cconnect: src/cconnect/CMakeFiles/cconnect.dir/cconnect.cpp.o
 src/cconnect/cconnect: src/cconnect/CMakeFiles/cconnect.dir/zmqserver.cpp.o
-src/cconnect/cconnect: src/cconnect/CMakeFiles/cconnect.dir/__/common/dbp.pb.cc.o
+src/cconnect/cconnect: src/cconnect/CMakeFiles/cconnect.dir/__/common/cconnect2.pb.cc.o
+src/cconnect/cconnect: src/cconnect/CMakeFiles/cconnect.dir/lmdbwarp.cpp.o
 src/cconnect/cconnect: src/cconnect/CMakeFiles/cconnect.dir/build.make
 src/cconnect/cconnect: /usr/local/lib/libzmq.so.5.2.4
 src/cconnect/cconnect: /usr/lib/x86_64-linux-gnu/libsodium.so
 src/cconnect/cconnect: src/cconnect/CMakeFiles/cconnect.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chun/workbench/cconnect2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable cconnect"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chun/workbench/cconnect2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable cconnect"
 	cd /home/chun/workbench/cconnect2/build/src/cconnect && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cconnect.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

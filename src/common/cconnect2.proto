@@ -1,0 +1,121 @@
+syntax = "proto3";
+
+package cconnect2;
+import "google/protobuf/any.proto";
+
+enum Msg
+{
+	CONNECT = 0;
+	CONNECTED = 1;
+	FAILED = 2;
+
+	PING = 3;
+	PONG = 4;
+
+	SUB = 5;
+	UNSUB = 6;
+	NOSUB = 7;
+	READY = 8;
+
+	ADDED = 9;
+	CHANGED = 10;
+	REMOVED = 11;
+
+	METHOD = 12;
+	RESULT = 13;
+    ERROR = 14;
+}
+
+message Base
+{
+	Msg msg = 1;                        //消息类型
+    int32 pid = 2;                      //进程id
+	google.protobuf.Any object = 3;     //消息体
+}
+
+message Connect
+{
+    map<string, google.protobuf.Any> udata = 1; //用户数据
+}
+
+message Connected
+{
+    map<string, google.protobuf.Any> info = 1; //链接建立的返回的初始数据
+}
+
+message Failed
+{
+    string reason = 1; //失败原因
+}
+
+message Ping
+{
+    string id = 1;
+}
+
+message Pong
+{
+    string id = 1;
+}
+
+message Sub
+{
+    string name = 1; //订阅的通道
+}
+
+message Unsub
+{
+    string name = 1; //解除订阅的通道
+}
+
+message Nosub
+{
+    string name = 1;    //解除订阅成功或订阅失败
+    string error = 2;   //失败原因
+}
+
+message Ready
+{
+    string name = 1; //订阅成功
+}
+
+message Added
+{
+    string name = 1;                    //订阅通道
+    string id = 2;                      //消息id
+    google.protobuf.Any object = 3;     //消息体
+}
+
+message Changed
+{
+    string name = 1;
+    string id = 2;
+    google.protobuf.Any object = 3;
+}
+
+message Removed 
+{
+    string name = 1;
+    string id = 2;
+    google.protobuf.Any object = 3;
+}
+
+message Method 
+{
+    string method = 1;                  //函数名称
+    string id = 2;                      //调用id
+    google.protobuf.Any params = 3;     //参数体
+}
+
+message Result
+{
+    string id = 1;                              //调用id
+    string error = 2;                           //错误信息
+    repeated google.protobuf.Any result = 3;    //返回值消息体
+}
+
+message Error
+{
+    string reason = 1;  //全局错误原因
+    string explain = 2; //错误解释
+}

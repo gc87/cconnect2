@@ -1,10 +1,11 @@
 #include <iostream>
 #include <zmq.hpp>
 #include <zmq_addon.hpp>
-#include "../common/dbp.pb.h"
+#include "../common/cconnect2.pb.h"
 #include "../common/zmqclient.h"
 
 using namespace std;
+using namespace cconnect2;
 
 int main(int argc, char *argv[]) {
     std::string    mainIPC("ipc://cconnect.ipc");
@@ -13,10 +14,10 @@ int main(int argc, char *argv[]) {
     sock.connect(mainIPC);
 
     while (true) {
-        dbp::Base base;
-        base.set_msg(dbp::Msg::PING);
+        Base base;
+        base.set_msg(Msg::PING);
 
-        dbp::Ping ping;
+        Ping ping;
         ping.set_id("10001");
 
         base.mutable_object()->PackFrom(ping);
@@ -30,10 +31,16 @@ int main(int argc, char *argv[]) {
         zmq::message_t m;
         sock.recv(m, zmq::recv_flags::none);
 
-        dbp::Base    newBase;
-        dbp::Pong    pong;
+        Base         newBase;
+        Pong         pong;
         const string str = m.to_string();
         newBase.ParseFromString(str);
+
+        if (newBase.object().Is<Pong>()) {
+            if (newBase.object().UnpackTo(&pong)) {
+                std::cout << pong.id() << std::endl;
+            }
+        }
 
         // std::string str = m.to_string();
         std::cout << newBase.msg() << std::endl;

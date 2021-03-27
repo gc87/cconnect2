@@ -1,7 +1,7 @@
 #ifndef ZMQ_SERVER_H
 #define ZMQ_SERVER_H
 
-#include "../common/dbp.pb.h"
+#include "../common/cconnect2.pb.h"
 
 namespace cconnect2 {
 namespace cconnect {
@@ -25,11 +25,11 @@ public:
     ~ZmqServer() = default;
 
 private:
-    std::string connectHandle(dbp::Base &base);
-    std::string pingHandle(dbp::Base &base);
-    std::string subscribeHandle(dbp::Base &base);
-    std::string unSubscribeHandle(dbp::Base &base);
-    std::string methodHandle(dbp::Base &base);
+    std::string connectHandle(Connect &connect);
+    std::string pingHandle(Ping &ping);
+    std::string subscribeHandle(Sub &subscribe);
+    std::string unsubscribeHandle(Unsub &unsubscribe);
+    std::string methodHandle(Method &method);
     std::string parseDBP(const std::string &str);
     void        mainSockHandle();
     void        addPublishSock();

@@ -1,8 +1,0 @@
-syntax = "proto3";
-
-package ccnt;
-
-message Test
-{
-    repeated string ids = 1;
-}

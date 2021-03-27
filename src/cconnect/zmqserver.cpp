@@ -6,7 +6,7 @@
 #include <thread>
 #include <zmq.hpp>
 #include <zmq_addon.hpp>
-#include "../common/dbp.pb.h"
+#include "../common/cconnect2.pb.h"
 #include "zmqserver.h"
 
 using namespace std;
@@ -35,16 +35,16 @@ void ZmqServer::mainSockHandle() {
     t.detach();
 }
 
-string ZmqServer::connectHandle(dbp::Base &base) {
+string ZmqServer::connectHandle(Connect &connect) {
     return string("");
 }
 
-string ZmqServer::pingHandle(dbp::Base &base) {
-    dbp::Pong pong;
-    pong.set_id("10000");
+string ZmqServer::pingHandle(Ping &ping) {
+    Pong pong;
+    pong.set_id(ping.id());
 
-    dbp::Base newBase;
-    newBase.set_msg(dbp::Msg::PONG);
+    Base newBase;
+    newBase.set_msg(Msg::PONG);
     newBase.mutable_object()->PackFrom(pong);
 
     string serializeStr;
@@ -54,21 +54,21 @@ string ZmqServer::pingHandle(dbp::Base &base) {
 }
 
 string ZmqServer::parseDBP(const string &str) {
-    dbp::Base base;
+    Base base;
     if (!base.ParseFromString(str)) {
         return string("");
     }
 
-    switch (base.msg()) {
-        case dbp::Msg::CONNECT:
-            return connectHandle(base);
-            break;
-        case dbp::Msg::PING:
-            return pingHandle(base);
-            break;
+    if (base.object().Is<Connect>()) {
+        Connect connect;
+        base.object().UnpackTo(&connect);
+        return connectHandle(connect);
+    }
 
-        default:
-            break;
+    if (base.object().Is<Ping>()) {
+        Ping ping;
+        base.object().UnpackTo(&ping);
+        return pingHandle(ping);
     }
 
     return string("");
