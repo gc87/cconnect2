@@ -179,32 +179,32 @@ cconnect.cpp.s:
 	cd /home/chun/workbench/cconnect2/build && $(MAKE) -f src/cconnect/CMakeFiles/cconnect.dir/build.make src/cconnect/CMakeFiles/cconnect.dir/cconnect.cpp.s
 .PHONY : cconnect.cpp.s
 
-lmdbwarp.o: lmdbwarp.cpp.o
+lmdbwrap.o: lmdbwrap.cpp.o
 
-.PHONY : lmdbwarp.o
+.PHONY : lmdbwrap.o
 
 # target to build an object file
-lmdbwarp.cpp.o:
-	cd /home/chun/workbench/cconnect2/build && $(MAKE) -f src/cconnect/CMakeFiles/cconnect.dir/build.make src/cconnect/CMakeFiles/cconnect.dir/lmdbwarp.cpp.o
-.PHONY : lmdbwarp.cpp.o
+lmdbwrap.cpp.o:
+	cd /home/chun/workbench/cconnect2/build && $(MAKE) -f src/cconnect/CMakeFiles/cconnect.dir/build.make src/cconnect/CMakeFiles/cconnect.dir/lmdbwrap.cpp.o
+.PHONY : lmdbwrap.cpp.o
 
-lmdbwarp.i: lmdbwarp.cpp.i
+lmdbwrap.i: lmdbwrap.cpp.i
 
-.PHONY : lmdbwarp.i
+.PHONY : lmdbwrap.i
 
 # target to preprocess a source file
-lmdbwarp.cpp.i:
-	cd /home/chun/workbench/cconnect2/build && $(MAKE) -f src/cconnect/CMakeFiles/cconnect.dir/build.make src/cconnect/CMakeFiles/cconnect.dir/lmdbwarp.cpp.i
-.PHONY : lmdbwarp.cpp.i
+lmdbwrap.cpp.i:
+	cd /home/chun/workbench/cconnect2/build && $(MAKE) -f src/cconnect/CMakeFiles/cconnect.dir/build.make src/cconnect/CMakeFiles/cconnect.dir/lmdbwrap.cpp.i
+.PHONY : lmdbwrap.cpp.i
 
-lmdbwarp.s: lmdbwarp.cpp.s
+lmdbwrap.s: lmdbwrap.cpp.s
 
-.PHONY : lmdbwarp.s
+.PHONY : lmdbwrap.s
 
 # target to generate assembly for a file
-lmdbwarp.cpp.s:
-	cd /home/chun/workbench/cconnect2/build && $(MAKE) -f src/cconnect/CMakeFiles/cconnect.dir/build.make src/cconnect/CMakeFiles/cconnect.dir/lmdbwarp.cpp.s
-.PHONY : lmdbwarp.cpp.s
+lmdbwrap.cpp.s:
+	cd /home/chun/workbench/cconnect2/build && $(MAKE) -f src/cconnect/CMakeFiles/cconnect.dir/build.make src/cconnect/CMakeFiles/cconnect.dir/lmdbwrap.cpp.s
+.PHONY : lmdbwrap.cpp.s
 
 zmqserver.o: zmqserver.cpp.o
 
@@ -248,9 +248,9 @@ help:
 	@echo "... cconnect.o"
 	@echo "... cconnect.i"
 	@echo "... cconnect.s"
-	@echo "... lmdbwarp.o"
-	@echo "... lmdbwarp.i"
-	@echo "... lmdbwarp.s"
+	@echo "... lmdbwrap.o"
+	@echo "... lmdbwrap.i"
+	@echo "... lmdbwrap.s"
 	@echo "... zmqserver.o"
 	@echo "... zmqserver.i"
 	@echo "... zmqserver.s"

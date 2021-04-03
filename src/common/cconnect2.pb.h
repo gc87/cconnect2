@@ -290,11 +290,28 @@ class Base PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kObjectFieldNumber = 3,
+    kNameFieldNumber = 3,
+    kObjectFieldNumber = 4,
     kMsgFieldNumber = 1,
     kPidFieldNumber = 2,
   };
-  // .google.protobuf.Any object = 3;
+  // string name = 3;
+  void clear_name();
+  const std::string& name() const;
+  void set_name(const std::string& value);
+  void set_name(std::string&& value);
+  void set_name(const char* value);
+  void set_name(const char* value, size_t size);
+  std::string* mutable_name();
+  std::string* release_name();
+  void set_allocated_name(std::string* name);
+  private:
+  const std::string& _internal_name() const;
+  void _internal_set_name(const std::string& value);
+  std::string* _internal_mutable_name();
+  public:
+
+  // .google.protobuf.Any object = 4;
   bool has_object() const;
   private:
   bool _internal_has_object() const;
@@ -337,6 +354,7 @@ class Base PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
   PROTOBUF_NAMESPACE_ID::Any* object_;
   int msg_;
   ::PROTOBUF_NAMESPACE_ID::int32 pid_;
@@ -2856,7 +2874,68 @@ inline void Base::set_pid(::PROTOBUF_NAMESPACE_ID::int32 value) {
   // @@protoc_insertion_point(field_set:cconnect2.Base.pid)
 }
 
-// .google.protobuf.Any object = 3;
+// string name = 3;
+inline void Base::clear_name() {
+  name_.ClearToEmpty();
+}
+inline const std::string& Base::name() const {
+  // @@protoc_insertion_point(field_get:cconnect2.Base.name)
+  return _internal_name();
+}
+inline void Base::set_name(const std::string& value) {
+  _internal_set_name(value);
+  // @@protoc_insertion_point(field_set:cconnect2.Base.name)
+}
+inline std::string* Base::mutable_name() {
+  // @@protoc_insertion_point(field_mutable:cconnect2.Base.name)
+  return _internal_mutable_name();
+}
+inline const std::string& Base::_internal_name() const {
+  return name_.Get();
+}
+inline void Base::_internal_set_name(const std::string& value) {
+  
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void Base::set_name(std::string&& value) {
+  
+  name_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:cconnect2.Base.name)
+}
+inline void Base::set_name(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:cconnect2.Base.name)
+}
+inline void Base::set_name(const char* value,
+    size_t size) {
+  
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:cconnect2.Base.name)
+}
+inline std::string* Base::_internal_mutable_name() {
+  
+  return name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* Base::release_name() {
+  // @@protoc_insertion_point(field_release:cconnect2.Base.name)
+  return name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void Base::set_allocated_name(std::string* name) {
+  if (name != nullptr) {
+    
+  } else {
+    
+  }
+  name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:cconnect2.Base.name)
+}
+
+// .google.protobuf.Any object = 4;
 inline bool Base::_internal_has_object() const {
   return this != internal_default_instance() && object_ != nullptr;
 }

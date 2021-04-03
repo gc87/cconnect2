@@ -17,6 +17,7 @@ int main(int argc, char *argv[]) {
 
     string              mainIPC("ipc://cconnect.ipc");
     cconnect::ZmqServer zmqServer(mainIPC);
+    // TODO:设置lmdbwrap实例到server中
     zmqServer.ServerLoop();
 
     return 0;

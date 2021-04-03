@@ -7,6 +7,7 @@
 #include <zmq.hpp>
 #include <zmq_addon.hpp>
 #include "../common/cconnect2.pb.h"
+#include "lmdbwrap.h"
 #include "zmqserver.h"
 
 using namespace std;
@@ -19,15 +20,19 @@ ZmqServer::ZmqServer(const std::string ipc)
     zmqSock.bind(ipc);
 }
 
+void ZmqServer::SetLmdbWrap(LmdbWarp &lmdbWrap) {
+    lmdbWarp = lmdbWarp;
+}
+
 void ZmqServer::mainSockHandle() {
     std::thread t([ this ]() {
         while (threadRunning) {
             {
-                std::lock_guard<std::mutex> lg(messageListMutex);
-                if (!messageList.empty()) {
-                    auto item = messageList.cbegin();
-                    messageList.pop_front();
-                }
+                // std::lock_guard<std::mutex> lg(messageListMutex);
+                // if (!messageList.empty()) {
+                //     auto item = messageList.cbegin();
+                //     messageList.pop_front();
+                // }
             }
         }
     });
@@ -35,7 +40,24 @@ void ZmqServer::mainSockHandle() {
     t.detach();
 }
 
-string ZmqServer::connectHandle(Connect &connect) {
+string ZmqServer::generatePubIPCString(const std::string &name, const int &pid) const {
+    return "ipc://cconnect-" + name + "-" + to_string(pid) + ".ipc";
+}
+
+string ZmqServer::connectHandle(const Connect &connect, const string &name, const int &pid) {
+    shared_ptr<zmq::socket_t> sock = make_shared<zmq::socket_t>(zmqContext, zmq::socket_type::pub);
+    string                    pubIPC = generatePubIPCString(name, pid);
+    sock->bind(pubIPC);
+
+    {
+        std::lock_guard<std::mutex> lg(pubSocksMutex);
+
+        if (publishSocks.find(pubIPC) == publishSocks.end()) {
+            publishSocks.insert(std::make_pair(pubIPC, sock));
+        }
+    }
+
+    // TODO: 创建返回结果
     return string("");
 }
 
@@ -62,7 +84,7 @@ string ZmqServer::parseDBP(const string &str) {
     if (base.object().Is<Connect>()) {
         Connect connect;
         base.object().UnpackTo(&connect);
-        return connectHandle(connect);
+        return connectHandle(connect, base.name(), base.pid());
     }
 
     if (base.object().Is<Ping>()) {

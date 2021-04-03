@@ -2,22 +2,27 @@
 #define ZMQ_SERVER_H
 
 #include "../common/cconnect2.pb.h"
+#include "lmdbwrap.h"
+
+using namespace std;
 
 namespace cconnect2 {
 namespace cconnect {
 class ZmqServer {
 private:
-    std::string                          ipc;
-    zmq::context_t                       zmqContext;
-    zmq::socket_t                        zmqSock;
-    std::map<std::string, zmq::socket_t> publishSocks;
-    std::mutex                           messageListMutex;
-    std::list<std::string>               messageList;
-    bool                                 threadRunning;
-    bool                                 serverRunning;
+    string                                 ipc;
+    zmq::context_t                         zmqContext;
+    zmq::socket_t                          zmqSock;
+    map<string, set<string>>               channels;
+    mutex                                  pubSocksMutex;
+    map<string, shared_ptr<zmq::socket_t>> publishSocks;
+    bool                                   threadRunning;
+    bool                                   serverRunning;
+    LmdbWarp                               lmdbWarp;
 
 public:
-    ZmqServer(const std::string ipc);
+    ZmqServer(const string ipc);
+    void SetLmdbWrap(LmdbWarp &lmdbWrap);
     void PublishMessage();
     void ServerLoop();
     void ServerStop();
@@ -25,15 +30,16 @@ public:
     ~ZmqServer() = default;
 
 private:
-    std::string connectHandle(Connect &connect);
-    std::string pingHandle(Ping &ping);
-    std::string subscribeHandle(Sub &subscribe);
-    std::string unsubscribeHandle(Unsub &unsubscribe);
-    std::string methodHandle(Method &method);
-    std::string parseDBP(const std::string &str);
-    void        mainSockHandle();
-    void        addPublishSock();
-    void        deletePublishSock();
+    string connectHandle(const Connect &connect, const string &name, const int &pid);
+    string pingHandle(Ping &ping);
+    string subscribeHandle(Sub &subscribe);
+    string unsubscribeHandle(Unsub &unsubscribe);
+    string methodHandle(Method &method);
+    string parseDBP(const string &str);
+    void   mainSockHandle();
+    void   addPublishSock();
+    void   deletePublishSock();
+    string generatePubIPCString(const string &name, const int &pid) const;
 };
 } // namespace cconnect
 } // namespace cconnect2

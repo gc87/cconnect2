@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/cconnect.dir/__/common/cconnect2.pb.cc.o"
   "CMakeFiles/cconnect.dir/cconnect.cpp.o"
-  "CMakeFiles/cconnect.dir/lmdbwarp.cpp.o"
+  "CMakeFiles/cconnect.dir/lmdbwrap.cpp.o"
   "CMakeFiles/cconnect.dir/zmqserver.cpp.o"
   "cconnect"
   "cconnect.pdb"

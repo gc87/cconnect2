@@ -19,7 +19,8 @@ PROTOBUF_PRAGMA_INIT_SEG
 namespace cconnect2 {
 constexpr Base::Base(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : object_(nullptr)
+  : name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , object_(nullptr)
   , msg_(0)
 
   , pid_(0){}
@@ -259,6 +260,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_cconnect2_2eproto::offsets[] P
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::cconnect2::Base, msg_),
   PROTOBUF_FIELD_OFFSET(::cconnect2::Base, pid_),
+  PROTOBUF_FIELD_OFFSET(::cconnect2::Base, name_),
   PROTOBUF_FIELD_OFFSET(::cconnect2::Base, object_),
   PROTOBUF_FIELD_OFFSET(::cconnect2::Connect_UdataEntry_DoNotUse, _has_bits_),
   PROTOBUF_FIELD_OFFSET(::cconnect2::Connect_UdataEntry_DoNotUse, _internal_metadata_),
@@ -383,23 +385,23 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_cconnect2_2eproto::offsets[] P
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::cconnect2::Base)},
-  { 8, 15, sizeof(::cconnect2::Connect_UdataEntry_DoNotUse)},
-  { 17, -1, sizeof(::cconnect2::Connect)},
-  { 23, 30, sizeof(::cconnect2::Connected_InfoEntry_DoNotUse)},
-  { 32, -1, sizeof(::cconnect2::Connected)},
-  { 38, -1, sizeof(::cconnect2::Failed)},
-  { 44, -1, sizeof(::cconnect2::Ping)},
-  { 50, -1, sizeof(::cconnect2::Pong)},
-  { 56, -1, sizeof(::cconnect2::Sub)},
-  { 62, -1, sizeof(::cconnect2::Unsub)},
-  { 68, -1, sizeof(::cconnect2::Nosub)},
-  { 75, -1, sizeof(::cconnect2::Ready)},
-  { 81, -1, sizeof(::cconnect2::Added)},
-  { 89, -1, sizeof(::cconnect2::Changed)},
-  { 97, -1, sizeof(::cconnect2::Removed)},
-  { 105, -1, sizeof(::cconnect2::Method)},
-  { 113, -1, sizeof(::cconnect2::Result)},
-  { 121, -1, sizeof(::cconnect2::Error)},
+  { 9, 16, sizeof(::cconnect2::Connect_UdataEntry_DoNotUse)},
+  { 18, -1, sizeof(::cconnect2::Connect)},
+  { 24, 31, sizeof(::cconnect2::Connected_InfoEntry_DoNotUse)},
+  { 33, -1, sizeof(::cconnect2::Connected)},
+  { 39, -1, sizeof(::cconnect2::Failed)},
+  { 45, -1, sizeof(::cconnect2::Ping)},
+  { 51, -1, sizeof(::cconnect2::Pong)},
+  { 57, -1, sizeof(::cconnect2::Sub)},
+  { 63, -1, sizeof(::cconnect2::Unsub)},
+  { 69, -1, sizeof(::cconnect2::Nosub)},
+  { 76, -1, sizeof(::cconnect2::Ready)},
+  { 82, -1, sizeof(::cconnect2::Added)},
+  { 90, -1, sizeof(::cconnect2::Changed)},
+  { 98, -1, sizeof(::cconnect2::Removed)},
+  { 106, -1, sizeof(::cconnect2::Method)},
+  { 114, -1, sizeof(::cconnect2::Result)},
+  { 122, -1, sizeof(::cconnect2::Error)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -425,42 +427,42 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 
 const char descriptor_table_protodef_cconnect2_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\017cconnect2.proto\022\tcconnect2\032\031google/pro"
-  "tobuf/any.proto\"V\n\004Base\022\033\n\003msg\030\001 \001(\0162\016.c"
-  "connect2.Msg\022\013\n\003pid\030\002 \001(\005\022$\n\006object\030\003 \001("
-  "\0132\024.google.protobuf.Any\"{\n\007Connect\022,\n\005ud"
-  "ata\030\001 \003(\0132\035.cconnect2.Connect.UdataEntry"
-  "\032B\n\nUdataEntry\022\013\n\003key\030\001 \001(\t\022#\n\005value\030\002 \001"
-  "(\0132\024.google.protobuf.Any:\0028\001\"|\n\tConnecte"
-  "d\022,\n\004info\030\001 \003(\0132\036.cconnect2.Connected.In"
-  "foEntry\032A\n\tInfoEntry\022\013\n\003key\030\001 \001(\t\022#\n\005val"
-  "ue\030\002 \001(\0132\024.google.protobuf.Any:\0028\001\"\030\n\006Fa"
-  "iled\022\016\n\006reason\030\001 \001(\t\"\022\n\004Ping\022\n\n\002id\030\001 \001(\t"
-  "\"\022\n\004Pong\022\n\n\002id\030\001 \001(\t\"\023\n\003Sub\022\014\n\004name\030\001 \001("
-  "\t\"\025\n\005Unsub\022\014\n\004name\030\001 \001(\t\"$\n\005Nosub\022\014\n\004nam"
-  "e\030\001 \001(\t\022\r\n\005error\030\002 \001(\t\"\025\n\005Ready\022\014\n\004name\030"
-  "\001 \001(\t\"G\n\005Added\022\014\n\004name\030\001 \001(\t\022\n\n\002id\030\002 \001(\t"
-  "\022$\n\006object\030\003 \001(\0132\024.google.protobuf.Any\"I"
-  "\n\007Changed\022\014\n\004name\030\001 \001(\t\022\n\n\002id\030\002 \001(\t\022$\n\006o"
-  "bject\030\003 \001(\0132\024.google.protobuf.Any\"I\n\007Rem"
-  "oved\022\014\n\004name\030\001 \001(\t\022\n\n\002id\030\002 \001(\t\022$\n\006object"
-  "\030\003 \001(\0132\024.google.protobuf.Any\"J\n\006Method\022\016"
-  "\n\006method\030\001 \001(\t\022\n\n\002id\030\002 \001(\t\022$\n\006params\030\003 \001"
-  "(\0132\024.google.protobuf.Any\"I\n\006Result\022\n\n\002id"
-  "\030\001 \001(\t\022\r\n\005error\030\002 \001(\t\022$\n\006result\030\003 \003(\0132\024."
-  "google.protobuf.Any\"(\n\005Error\022\016\n\006reason\030\001"
-  " \001(\t\022\017\n\007explain\030\002 \001(\t*\263\001\n\003Msg\022\013\n\007CONNECT"
-  "\020\000\022\r\n\tCONNECTED\020\001\022\n\n\006FAILED\020\002\022\010\n\004PING\020\003\022"
-  "\010\n\004PONG\020\004\022\007\n\003SUB\020\005\022\t\n\005UNSUB\020\006\022\t\n\005NOSUB\020\007"
-  "\022\t\n\005READY\020\010\022\t\n\005ADDED\020\t\022\013\n\007CHANGED\020\n\022\013\n\007R"
-  "EMOVED\020\013\022\n\n\006METHOD\020\014\022\n\n\006RESULT\020\r\022\t\n\005ERRO"
-  "R\020\016b\006proto3"
+  "tobuf/any.proto\"d\n\004Base\022\033\n\003msg\030\001 \001(\0162\016.c"
+  "connect2.Msg\022\013\n\003pid\030\002 \001(\005\022\014\n\004name\030\003 \001(\t\022"
+  "$\n\006object\030\004 \001(\0132\024.google.protobuf.Any\"{\n"
+  "\007Connect\022,\n\005udata\030\001 \003(\0132\035.cconnect2.Conn"
+  "ect.UdataEntry\032B\n\nUdataEntry\022\013\n\003key\030\001 \001("
+  "\t\022#\n\005value\030\002 \001(\0132\024.google.protobuf.Any:\002"
+  "8\001\"|\n\tConnected\022,\n\004info\030\001 \003(\0132\036.cconnect"
+  "2.Connected.InfoEntry\032A\n\tInfoEntry\022\013\n\003ke"
+  "y\030\001 \001(\t\022#\n\005value\030\002 \001(\0132\024.google.protobuf"
+  ".Any:\0028\001\"\030\n\006Failed\022\016\n\006reason\030\001 \001(\t\"\022\n\004Pi"
+  "ng\022\n\n\002id\030\001 \001(\t\"\022\n\004Pong\022\n\n\002id\030\001 \001(\t\"\023\n\003Su"
+  "b\022\014\n\004name\030\001 \001(\t\"\025\n\005Unsub\022\014\n\004name\030\001 \001(\t\"$"
+  "\n\005Nosub\022\014\n\004name\030\001 \001(\t\022\r\n\005error\030\002 \001(\t\"\025\n\005"
+  "Ready\022\014\n\004name\030\001 \001(\t\"G\n\005Added\022\014\n\004name\030\001 \001"
+  "(\t\022\n\n\002id\030\002 \001(\t\022$\n\006object\030\003 \001(\0132\024.google."
+  "protobuf.Any\"I\n\007Changed\022\014\n\004name\030\001 \001(\t\022\n\n"
+  "\002id\030\002 \001(\t\022$\n\006object\030\003 \001(\0132\024.google.proto"
+  "buf.Any\"I\n\007Removed\022\014\n\004name\030\001 \001(\t\022\n\n\002id\030\002"
+  " \001(\t\022$\n\006object\030\003 \001(\0132\024.google.protobuf.A"
+  "ny\"J\n\006Method\022\016\n\006method\030\001 \001(\t\022\n\n\002id\030\002 \001(\t"
+  "\022$\n\006params\030\003 \001(\0132\024.google.protobuf.Any\"I"
+  "\n\006Result\022\n\n\002id\030\001 \001(\t\022\r\n\005error\030\002 \001(\t\022$\n\006r"
+  "esult\030\003 \003(\0132\024.google.protobuf.Any\"(\n\005Err"
+  "or\022\016\n\006reason\030\001 \001(\t\022\017\n\007explain\030\002 \001(\t*\263\001\n\003"
+  "Msg\022\013\n\007CONNECT\020\000\022\r\n\tCONNECTED\020\001\022\n\n\006FAILE"
+  "D\020\002\022\010\n\004PING\020\003\022\010\n\004PONG\020\004\022\007\n\003SUB\020\005\022\t\n\005UNSU"
+  "B\020\006\022\t\n\005NOSUB\020\007\022\t\n\005READY\020\010\022\t\n\005ADDED\020\t\022\013\n\007"
+  "CHANGED\020\n\022\013\n\007REMOVED\020\013\022\n\n\006METHOD\020\014\022\n\n\006RE"
+  "SULT\020\r\022\t\n\005ERROR\020\016b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_cconnect2_2eproto_deps[1] = {
   &::descriptor_table_google_2fprotobuf_2fany_2eproto,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_cconnect2_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_cconnect2_2eproto = {
-  false, false, 1171, descriptor_table_protodef_cconnect2_2eproto, "cconnect2.proto", 
+  false, false, 1185, descriptor_table_protodef_cconnect2_2eproto, "cconnect2.proto", 
   &descriptor_table_cconnect2_2eproto_once, descriptor_table_cconnect2_2eproto_deps, 1, 18,
   schemas, file_default_instances, TableStruct_cconnect2_2eproto::offsets,
   file_level_metadata_cconnect2_2eproto, file_level_enum_descriptors_cconnect2_2eproto, file_level_service_descriptors_cconnect2_2eproto,
@@ -528,6 +530,11 @@ Base::Base(::PROTOBUF_NAMESPACE_ID::Arena* arena)
 Base::Base(const Base& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_name().empty()) {
+    name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_name(), 
+      GetArena());
+  }
   if (from._internal_has_object()) {
     object_ = new PROTOBUF_NAMESPACE_ID::Any(*from.object_);
   } else {
@@ -540,6 +547,7 @@ Base::Base(const Base& from)
 }
 
 void Base::SharedCtor() {
+name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&object_) - reinterpret_cast<char*>(this)),
     0, static_cast<size_t>(reinterpret_cast<char*>(&pid_) -
@@ -554,6 +562,7 @@ Base::~Base() {
 
 void Base::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
+  name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete object_;
 }
 
@@ -573,6 +582,7 @@ void Base::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  name_.ClearToEmpty();
   if (GetArena() == nullptr && object_ != nullptr) {
     delete object_;
   }
@@ -605,9 +615,18 @@ const char* Base::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inter
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .google.protobuf.Any object = 3;
+      // string name = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          auto str = _internal_mutable_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "cconnect2.Base.name"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .google.protobuf.Any object = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_object(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
@@ -653,12 +672,22 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_pid(), target);
   }
 
-  // .google.protobuf.Any object = 3;
+  // string name = 3;
+  if (this->name().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "cconnect2.Base.name");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_name(), target);
+  }
+
+  // .google.protobuf.Any object = 4;
   if (this->has_object()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
-        3, _Internal::object(this), target, stream);
+        4, _Internal::object(this), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -677,7 +706,14 @@ size_t Base::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .google.protobuf.Any object = 3;
+  // string name = 3;
+  if (this->name().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_name());
+  }
+
+  // .google.protobuf.Any object = 4;
   if (this->has_object()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -728,6 +764,9 @@ void Base::MergeFrom(const Base& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
+  if (from.name().size() > 0) {
+    _internal_set_name(from._internal_name());
+  }
   if (from.has_object()) {
     _internal_mutable_object()->PROTOBUF_NAMESPACE_ID::Any::MergeFrom(from._internal_object());
   }
@@ -760,6 +799,7 @@ bool Base::IsInitialized() const {
 void Base::InternalSwap(Base* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(Base, pid_)
       + sizeof(Base::pid_)

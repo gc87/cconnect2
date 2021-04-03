@@ -1,5 +1,5 @@
-#ifndef LMDB_WARP
-#define LMDB_WARP
+#ifndef LMDB_WRAP
+#define LMDB_WRAP
 
 #include <lmdb.h>
 
@@ -9,6 +9,12 @@ namespace cconnect {
 class LmdbWarp {
 public:
     LmdbWarp();
+
+    int LmdbDrop();
+    int LmdbPut();
+    int LmdbGet();
+    int LmdbDel();
+
     ~LmdbWarp();
 
 private:

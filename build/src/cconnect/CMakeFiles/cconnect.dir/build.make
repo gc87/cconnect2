@@ -96,25 +96,25 @@ src/cconnect/CMakeFiles/cconnect.dir/__/common/cconnect2.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cconnect.dir/__/common/cconnect2.pb.cc.s"
 	cd /home/chun/workbench/cconnect2/build/src/cconnect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chun/workbench/cconnect2/src/common/cconnect2.pb.cc -o CMakeFiles/cconnect.dir/__/common/cconnect2.pb.cc.s
 
-src/cconnect/CMakeFiles/cconnect.dir/lmdbwarp.cpp.o: src/cconnect/CMakeFiles/cconnect.dir/flags.make
-src/cconnect/CMakeFiles/cconnect.dir/lmdbwarp.cpp.o: ../src/cconnect/lmdbwarp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chun/workbench/cconnect2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/cconnect/CMakeFiles/cconnect.dir/lmdbwarp.cpp.o"
-	cd /home/chun/workbench/cconnect2/build/src/cconnect && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cconnect.dir/lmdbwarp.cpp.o -c /home/chun/workbench/cconnect2/src/cconnect/lmdbwarp.cpp
+src/cconnect/CMakeFiles/cconnect.dir/lmdbwrap.cpp.o: src/cconnect/CMakeFiles/cconnect.dir/flags.make
+src/cconnect/CMakeFiles/cconnect.dir/lmdbwrap.cpp.o: ../src/cconnect/lmdbwrap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chun/workbench/cconnect2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/cconnect/CMakeFiles/cconnect.dir/lmdbwrap.cpp.o"
+	cd /home/chun/workbench/cconnect2/build/src/cconnect && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cconnect.dir/lmdbwrap.cpp.o -c /home/chun/workbench/cconnect2/src/cconnect/lmdbwrap.cpp
 
-src/cconnect/CMakeFiles/cconnect.dir/lmdbwarp.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cconnect.dir/lmdbwarp.cpp.i"
-	cd /home/chun/workbench/cconnect2/build/src/cconnect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chun/workbench/cconnect2/src/cconnect/lmdbwarp.cpp > CMakeFiles/cconnect.dir/lmdbwarp.cpp.i
+src/cconnect/CMakeFiles/cconnect.dir/lmdbwrap.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cconnect.dir/lmdbwrap.cpp.i"
+	cd /home/chun/workbench/cconnect2/build/src/cconnect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chun/workbench/cconnect2/src/cconnect/lmdbwrap.cpp > CMakeFiles/cconnect.dir/lmdbwrap.cpp.i
 
-src/cconnect/CMakeFiles/cconnect.dir/lmdbwarp.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cconnect.dir/lmdbwarp.cpp.s"
-	cd /home/chun/workbench/cconnect2/build/src/cconnect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chun/workbench/cconnect2/src/cconnect/lmdbwarp.cpp -o CMakeFiles/cconnect.dir/lmdbwarp.cpp.s
+src/cconnect/CMakeFiles/cconnect.dir/lmdbwrap.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cconnect.dir/lmdbwrap.cpp.s"
+	cd /home/chun/workbench/cconnect2/build/src/cconnect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chun/workbench/cconnect2/src/cconnect/lmdbwrap.cpp -o CMakeFiles/cconnect.dir/lmdbwrap.cpp.s
 
 # Object files for target cconnect
 cconnect_OBJECTS = \
 "CMakeFiles/cconnect.dir/cconnect.cpp.o" \
 "CMakeFiles/cconnect.dir/zmqserver.cpp.o" \
 "CMakeFiles/cconnect.dir/__/common/cconnect2.pb.cc.o" \
-"CMakeFiles/cconnect.dir/lmdbwarp.cpp.o"
+"CMakeFiles/cconnect.dir/lmdbwrap.cpp.o"
 
 # External object files for target cconnect
 cconnect_EXTERNAL_OBJECTS =
@@ -122,7 +122,7 @@ cconnect_EXTERNAL_OBJECTS =
 src/cconnect/cconnect: src/cconnect/CMakeFiles/cconnect.dir/cconnect.cpp.o
 src/cconnect/cconnect: src/cconnect/CMakeFiles/cconnect.dir/zmqserver.cpp.o
 src/cconnect/cconnect: src/cconnect/CMakeFiles/cconnect.dir/__/common/cconnect2.pb.cc.o
-src/cconnect/cconnect: src/cconnect/CMakeFiles/cconnect.dir/lmdbwarp.cpp.o
+src/cconnect/cconnect: src/cconnect/CMakeFiles/cconnect.dir/lmdbwrap.cpp.o
 src/cconnect/cconnect: src/cconnect/CMakeFiles/cconnect.dir/build.make
 src/cconnect/cconnect: /usr/local/lib/libzmq.so.5.2.4
 src/cconnect/cconnect: /usr/lib/x86_64-linux-gnu/libsodium.so

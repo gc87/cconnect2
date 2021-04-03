@@ -30,7 +30,8 @@ message Base
 {
 	Msg msg = 1;                        //消息类型
     int32 pid = 2;                      //进程id
-	google.protobuf.Any object = 3;     //消息体
+    string name = 3;                    //进程名
+	google.protobuf.Any object = 4;     //消息体
 }
 
 message Connect

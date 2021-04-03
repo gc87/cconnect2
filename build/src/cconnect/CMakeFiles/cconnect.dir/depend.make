@@ -6,12 +6,14 @@ src/cconnect/CMakeFiles/cconnect.dir/__/common/cconnect2.pb.cc.o: ../src/common/
 
 src/cconnect/CMakeFiles/cconnect.dir/cconnect.cpp.o: ../src/cconnect/cconnect.cpp
 src/cconnect/CMakeFiles/cconnect.dir/cconnect.cpp.o: ../src/cconnect/cconnect.h
+src/cconnect/CMakeFiles/cconnect.dir/cconnect.cpp.o: ../src/cconnect/lmdbwrap.h
 src/cconnect/CMakeFiles/cconnect.dir/cconnect.cpp.o: ../src/cconnect/zmqserver.h
 src/cconnect/CMakeFiles/cconnect.dir/cconnect.cpp.o: ../src/common/cconnect2.pb.h
 
-src/cconnect/CMakeFiles/cconnect.dir/lmdbwarp.cpp.o: ../src/cconnect/lmdbwarp.cpp
-src/cconnect/CMakeFiles/cconnect.dir/lmdbwarp.cpp.o: ../src/cconnect/lmdbwarp.h
+src/cconnect/CMakeFiles/cconnect.dir/lmdbwrap.cpp.o: ../src/cconnect/lmdbwrap.cpp
+src/cconnect/CMakeFiles/cconnect.dir/lmdbwrap.cpp.o: ../src/cconnect/lmdbwrap.h
 
+src/cconnect/CMakeFiles/cconnect.dir/zmqserver.cpp.o: ../src/cconnect/lmdbwrap.h
 src/cconnect/CMakeFiles/cconnect.dir/zmqserver.cpp.o: ../src/cconnect/zmqserver.cpp
 src/cconnect/CMakeFiles/cconnect.dir/zmqserver.cpp.o: ../src/cconnect/zmqserver.h
 src/cconnect/CMakeFiles/cconnect.dir/zmqserver.cpp.o: ../src/common/cconnect2.pb.h

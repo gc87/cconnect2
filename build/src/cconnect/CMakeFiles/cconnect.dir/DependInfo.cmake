@@ -6,7 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/chun/workbench/cconnect2/src/common/cconnect2.pb.cc" "/home/chun/workbench/cconnect2/build/src/cconnect/CMakeFiles/cconnect.dir/__/common/cconnect2.pb.cc.o"
   "/home/chun/workbench/cconnect2/src/cconnect/cconnect.cpp" "/home/chun/workbench/cconnect2/build/src/cconnect/CMakeFiles/cconnect.dir/cconnect.cpp.o"
-  "/home/chun/workbench/cconnect2/src/cconnect/lmdbwarp.cpp" "/home/chun/workbench/cconnect2/build/src/cconnect/CMakeFiles/cconnect.dir/lmdbwarp.cpp.o"
+  "/home/chun/workbench/cconnect2/src/cconnect/lmdbwrap.cpp" "/home/chun/workbench/cconnect2/build/src/cconnect/CMakeFiles/cconnect.dir/lmdbwrap.cpp.o"
   "/home/chun/workbench/cconnect2/src/cconnect/zmqserver.cpp" "/home/chun/workbench/cconnect2/build/src/cconnect/CMakeFiles/cconnect.dir/zmqserver.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
