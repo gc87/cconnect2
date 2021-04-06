@@ -1,1 +1,0 @@
-/usr/bin/c++  -O3 -DNDEBUG -s   CMakeFiles/cconnect.dir/cconnect.cpp.o CMakeFiles/cconnect.dir/zmqserver.cpp.o CMakeFiles/cconnect.dir/__/common/cconnect2.pb.cc.o CMakeFiles/cconnect.dir/lmdbwrap.cpp.o  -o cconnect  -Wl,-rpath,/usr/local/lib -lboost_system -lboost_filesystem -lprotobuf -llmdb /usr/local/lib/libzmq.so.5.2.4 -lpthread /usr/lib/x86_64-linux-gnu/libsodium.so -lrt 

@@ -11,6 +11,7 @@
 #include "zmqserver.h"
 
 using namespace std;
+
 namespace cconnect2 {
 namespace cconnect {
 
@@ -45,7 +46,7 @@ string ZmqServer::generatePubIPCString(const std::string &name, const int &pid) 
 }
 
 string ZmqServer::connectHandle(const Connect &connect, const string &name, const int &pid) {
-    shared_ptr<zmq::socket_t> sock = make_shared<zmq::socket_t>(zmqContext, zmq::socket_type::pub);
+    shared_ptr<zmq::socket_t> sock   = make_shared<zmq::socket_t>(zmqContext, zmq::socket_type::pub);
     string                    pubIPC = generatePubIPCString(name, pid);
     sock->bind(pubIPC);
 
