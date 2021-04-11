@@ -4,27 +4,27 @@
 #include <lmdb.h>
 
 namespace cconnect2 {
-namespace cconnect {
+  namespace cconnect {
 
-class LmdbWarp {
-public:
-    LmdbWarp();
+    class LmdbWarp {
+     public:
+      LmdbWarp();
 
-    int LmdbDrop();
-    int LmdbPut();
-    int LmdbGet();
-    int LmdbDel();
+      int LmdbDrop();
+      int LmdbPut();
+      int LmdbGet();
+      int LmdbDel();
 
-    ~LmdbWarp();
+      ~LmdbWarp();
 
-private:
-    MDB_env *   env;
-    MDB_dbi     dbi;
-    MDB_txn *   txn;
-    MDB_cursor *cursor;
-};
+     private:
+      MDB_env *env;
+      MDB_dbi dbi;
+      MDB_txn *txn;
+      MDB_cursor *cursor;
+    };
 
-} // namespace cconnect
-} // namespace cconnect2
+  }  // namespace cconnect
+}  // namespace cconnect2
 
 #endif
